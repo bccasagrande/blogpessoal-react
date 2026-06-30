@@ -4,7 +4,9 @@ import Footer from './components/footer/Footer'
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Postagens from './pages/postagens/Postagens'
-import Temas from './pages/temas/Temas'
+import ListaTemas from './components/temas/listaTemas/ListaTemas'
+import FormTema from './components/temas/formTema/FormTema'
+import DeletarTema from './components/temas/deletarTema/DeletarTema'
 
 function App() {
   return (
@@ -14,7 +16,10 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/postagens' element={<Postagens />} />
-        <Route path='/temas' element={<Temas />} />
+        <Route path='/temas' element={<ListaTemas />} />
+        <Route path='/cadastrarTema' element={<FormTema />} />
+        <Route path='/editarTema/:id' element={<FormTema />} />
+        <Route path='/deletarTema/:id' element={<DeletarTema />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -22,3 +27,4 @@ function App() {
 }
 
 export default App
+
